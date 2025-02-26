@@ -1,0 +1,90 @@
+{
+    "raw_directory": "c:\\Users\\saood\\PycharmProjects\\pythonProject\\astro_research\\data\\raw\\NGC1856_CENTER_P01",
+    "calibration_directory": "c:\\Users\\saood\\PycharmProjects\\pythonProject\\astro_research\\data\\calibration",
+    "reduced_directory": "c:\\Users\\saood\\PycharmProjects\\pythonProject\\astro_research\\data\\reduced",
+    "output_directory": "c:\\Users\\saood\\PycharmProjects\\pythonProject\\astro_research\\data\\output",
+    "global": {
+        "withrvcorr": true,
+        "OB_list": [
+            "NGC1856_CENTER_P01"
+        ],
+        "OB": "NGC1856_CENTER_P01",
+        "dither_multiple_OBs": false,
+        "rootpath": "c:\\Users\\saood\\PycharmProjects\\pythonProject\\astro_research\\data/",
+        "mode": "WFM",
+        "auto_sort_data": true,
+        "using_specific_exposure_time": false,
+        "n_CPU": 4,
+        "pipeline_path": "/home/linuxbrew/.linuxbrew/bin/esoreflex"
+    },
+    "calibration": {
+        "using_ESO_calibration": false,
+        "dark": true,
+        "renew_statics": false,
+        "execute": true,
+        "create_sof": true
+    },
+    "sci_basic": {
+        "skyreject": true,
+        "skylines": "5577.339,6300.304",
+        "execute_std": true,
+        "execute": true,
+        "create_sof": true
+    },
+    "sky": {
+        "sky_field": false,
+        "fraction": 0.2,
+        "ignore": false,
+        "method": "model",
+        "execute": true,
+        "create_sof": true,
+        "modified": true
+    },
+    "std_flux": {
+        "execute": true,
+        "create_sof": true
+    },
+    "sci_post": {
+        "subtract_sky": true,
+        "autocalib": true,
+        "raman": false,
+        "execute": true,
+        "create_sof": true
+    },
+    "exp_combine": {
+        "weight": "exptime",
+        "execute": true,
+        "create_sof": true
+    },
+    "dither_collect": {
+        "user_list": [],
+        "execute": true
+    },
+    "exp_align": {
+        "execute": true,
+        "create_sof": true
+    },
+    "reduction": {
+        "bias": true,
+        "dark": true,
+        "flat": true,
+        "wavelength_calibration": true,
+        "illumination_flat": true,
+        "sky_subtraction": {
+            "modified": true,
+            "method": "subtract-model",
+            "sky_fraction": 0.2
+        },
+        "flux_calibration": true,
+        "telluric_correction": true,
+        "astrometric_correction": true
+    },
+    "cube": {
+        "wavelength_range": [
+            4600,
+            9350
+        ],
+        "spatial_sampling": 0.2,
+        "drizzle": true
+    }
+}
